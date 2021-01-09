@@ -1,0 +1,533 @@
+---
+title: "Reproducible Research with R and RStudio (Third Edition)"
+author: "Christopher Gandrud"
+date: "`r Sys.Date()`"
+documentclass: krantz
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+colorlinks: yes
+site: bookdown::bookdown_site
+chapter_name: "Chapter "
+description: "Reproducible Research with R and RStudio (Third Edition) brings together the skills and tools needed for doing and presenting computational research. Using straightforward examples, the book takes you through an entire reproducible research workflow. This practical workflow enables you to gather and analyze data as well as dynamically present results in print and on the web."
+github-repo: christophergandrud/Rep-Res-Book
+graphics: yes
+#cover-image: images/cover.jpg
+---
+
+# Preface {-}
+
+Placeholder
+
+
+## Motivation {-}
+## Changes to the Third Edition {-}
+## Changes to the Second Edition {-}
+## Acknowledgments {-}
+
+<!--chapter:end:index.Rmd-->
+
+# About the Author {-}
+
+**Christopher Gandrud** is Head of Economics and Experimentation at Zalando SE. He leads teams of social data scientists and software engineers building and evaluating large-scale automated decision-making systems. He was previously a research fellow at the Institute for Quantitative Social Science, Harvard University developing statistical software for the social and physical sciences. He has held posts at City, University of London, the Hertie School of Governance, Yonsei University, and the London School of Economics where in 2012 he completed a PhD in quantitative political science. 
+
+<!--chapter:end:01-author.Rmd-->
+
+
+# Stylistic Conventions {-}
+
+Placeholder
+
+
+
+<!--chapter:end:01-stylistic-conventions.Rmd-->
+
+
+# Additional Resources {-}
+
+Placeholder
+
+
+## Chapter Examples {-}
+## Short Example Project {-}
+## Updates {-}
+## Corrections {-}
+
+<!--chapter:end:02-additional-resources.Rmd-->
+
+
+# (PART) Getting Started {-}
+# Introducing Reproducible Research{#Intro}
+
+Placeholder
+
+
+## What Is Reproducible Research?
+## Why Should Research Be Reproducible?
+### For science
+#### Standard to judge scientific claims {-}
+#### Avoiding effort duplication and encouraging cumulative knowledge development {-}
+### For you
+#### Better work habits {-}
+#### Better teamwork {-}
+#### Changes are easier {-}
+#### Higher research impact {-}
+## Who Should Read This Book?
+### Academic researchers
+### Students
+### Instructors
+### Editors
+### Private sector researchers
+## The Tools of Reproducible Research
+### Why Use R, knitr/R Markdown, and RStudio for Reproducible Research?
+#### Why use R? {-}
+#### Why use knitr and R Markdown? {-}
+#### Why use RStudio? {-}
+## Installing the main software {#InstallR}
+### Installing markup languages {#InstallMarkup}
+### GNU Make {#InstallMake}
+### Other tools
+## Book Overview {#OtherBooks}
+### How to read this book
+#### More experienced R users {-}
+#### More experienced LaTeX users {-}
+#### Less experienced LaTeX/Markdown users {-}
+### Reproduce this book
+### Contents overview
+## Appendix: Additional R Setup {-}
+### R Packages {-}
+### Special issues {-}
+
+<!--chapter:end:03-introduction.Rmd-->
+
+
+# Getting Started with Reproducible Research {#GettingStartedRR}
+
+Placeholder
+
+
+## The Big Picture: A Workflow for Reproducible Research
+### Reproducible theory
+## Practical Tips for Reproducible Research
+### Document everything!
+#### Document your R session info {- #SessionInfoHow}
+### Everything is a (text) file
+#### Learn from the text file: keep it simple {-}
+### All files should be human readable
+#### Commenting {-}
+#### Style guides {-}
+#### Literate programming {-}
+### Explicitly tie your files together
+### Have a plan to organize, store, and make your files available
+
+<!--chapter:end:04-getting-started.Rmd-->
+
+
+# Getting Started with R, RStudio, and knitr/R Markdown {#GettingStartedRKnitr}
+
+Placeholder
+
+
+## Using R: The Basics
+### Objects {#Objects}
+#### Numeric and string objects {- #ObjectNames}
+#### Vector and data frame objects {-}
+#### Vectors {-}
+#### Matrices {-}
+#### Data frames {-}
+#### Component selection {- #ComponentSelect}
+#### `attach()`  and `with()` {-}
+#### Subscripts {-}
+### Functions {#FunctionsCommands}
+#### Arguments {-}
+### The workspace and history {#RSave}
+### R history {#RHistory}
+### Global R options {#ROptions}
+### Installing new packages and loading functions {#Packages}
+## Using RStudio
+#### The default window {-}
+#### The Source pane {-}
+## Using knitr and R Markdown: The Basics
+### What *knitr* does
+### What *rmarkdown* does {#rmardownHeader}
+### File extensions
+### Code chunks
+#### R Markdown {- #RMarkdownChunkBasic}
+#### R LaTeX (.`Rnw`) {-}
+#### Code chunk labels {-}
+#### Code chunk options {-}
+### Global chunk options {#GlobalChunkOptions}
+### *knitr* package options
+### Hooks
+### knitr, R Markdown, and RStudio
+#### Compiling R source code Notebooks {- #PublishRPubs}
+#### R Markdown {- #r-markdown}
+#### R (Sweave) LaTeX {-}
+### knitr and R
+### R Markdown and R {#rmarkdownRender}
+### Chapter summary {#chapter-summary .unnumbered}
+#### Controversy {-}
+#### R Markdown vs. Jupyter {-}
+#### Setup {-}
+#### Code Chunks {-}
+
+<!--chapter:end:05-start-R.Rmd-->
+
+
+# Getting Started with File Management {#DirectoriesChapter}
+
+Placeholder
+
+
+## File Paths and Naming Conventions
+### Root directories
+### Sub-directories and parent directories
+### Working directories
+### Absolute vs. relative paths
+### Spaces in directory and file names
+## Organizing Your Research Project
+## Organizing Research with RStudio Projects {#CreateRStudioProject}
+## R File Manipulation Functions
+#### `getwd()` {-}
+#### `list.files()` {-}
+#### `setwd()` {-}
+#### `here::set_here()` {- #sethere}
+#### `root.dir` in knittable documents {-}
+#### `dir.create()` {-}
+#### `file.create()` {-}
+#### `cat()` {- #catR}
+#### `unlink()` {-}
+#### `file.rename()` {-}
+#### `file.copy()` {-}
+## Unix-like Shell Commands for File Management
+#### `cd` {-}
+#### `pwd` {-}
+#### `ls` {-}
+#### `mkdir` {-}
+#### `echo` {-}
+#### `rm` {-}
+#### `mv` {-}
+#### `cp` {-}
+#### `system()` (R function) {- #systemRcommand}
+## File Navigation in RStudio
+### Chapter summary {-}
+
+<!--chapter:end:06-file-management.Rmd-->
+
+
+# (PART) Data Gathering and Storage {-}
+# Storing, Collaborating, Accessing Files, and Versioning {#Storing}
+
+Placeholder
+
+
+## Saving Data in Reproducible Formats {#TSVEscape}
+## Storing Your Files in the Cloud: Dropbox
+### Storage
+### Accessing data {#EnablePublicFolder}
+### Collaboration
+### Version control
+## Storing Your Files in the Cloud: GitHub {#GitHubMain}
+#### Storage and access {-}
+#### Collaboration {-}
+#### Version control {-}
+### Setting up GitHub: Basic
+### Version control with Git
+#### Setting up Git repositories locally {-}
+#### Checkout {-}
+#### Tags {-}
+#### Branches {-}
+#### Having Git ignore files {-}
+### Remote storage on GitHub {#NewGitHubRepo}
+#### Clone a new remote repository {- #GitClone}
+#### Push an existing repository to a new GitHub repo {- #RemoteAdd}
+#### Pushing commits to a GitHub repo {-}
+### Accessing on GitHub
+#### Downloading into R {- #GitDownload #RawGitHub}
+#### Viewing files {-}
+#### Collaboration with GitHub {-}
+#### Syncing a repository {-}
+### Summing up the GitHub workflow
+## RStudio and GitHub
+### Setting up Git/GitHub with Projects
+#### Git with a new project {- #NewProjectGit}
+#### Git initialize existing projects {-}
+#### Clone repository into a new project {-}
+#### Add existing Project repository to GitHub {-}
+### Using Git in RStudio Projects
+### Chapter summary {-}
+
+<!--chapter:end:07-storage.Rmd-->
+
+
+# Gathering Data with R {#DataGather}
+
+Placeholder
+
+
+## Organize Your Data Gathering: Makefiles
+### R Make-like files
+### GNU Make
+#### Example makefile {- #AsteriskWildcard}
+#### Running the Makefile {-}
+#### Makefiles and RStudio Projects {-}
+#### Other information about makefiles {-}
+## Importing Locally Stored Data Sets
+## Importing Data Sets from the Internet
+### Data from non-secure (*http*) URLs
+### Data from secure (*https*) URLs {#SecureDataDownload}
+### Compressed data stored online
+### Data APIs and feeds
+#### API R package example {-}
+## Advanced Automatic Data Gathering: Web Scraping
+#### The general process {-}
+#### More tools to learn for web scraping {-}
+### Chapter summary {-}
+
+<!--chapter:end:08-gather.Rmd-->
+
+
+# Preparing Data for Analysis {#DataClean}
+
+Placeholder
+
+
+## Cleaning Data for Merging
+### Get a handle on your data
+### Tibbles {-}
+### Reshaping data {#GatherReshape}
+### Renaming variables
+### Ordering data
+### Subsetting data
+### Recoding string/numeric variables
+### Creating new variables from old
+#### Creating factor variables {-}
+### Changing variable types
+## Merging Data Sets
+### Binding
+### Merging data frames
+### Bigger data {-}
+### Duplicate values {-}
+### Duplicate columns
+### Chapter summary {-}
+
+<!--chapter:end:09-clean.Rmd-->
+
+
+# (PART) Analysis and Results {-}
+# Statistical Modeling and knitr/R Markdown {#StatsModel}
+
+Placeholder
+
+
+## Incorporating Analyses into the Markup
+### Full code chunks
+#### `include` {-}
+#### `eval` {-}
+#### `echo` {-}
+#### `results` {-}
+#### `warning`, `message`, `error` {-}
+#### `cache` {-}
+#### `dependson` {-}
+#### `cache.extra` {-}
+#### `size` {-}
+### Showing code and results inline
+#### LaTeX {-}
+#### *Inline static code* {-}
+#### Inline dynamic code {-}
+#### Markdown {-}
+#### *Inline static code* {-}
+#### *Inline dynamic code* {-}
+### Dynamically including non-R code in code chunks
+## Dynamically Including Modular Analysis Files
+### Source from a local file
+#### Sourcing a makefile in a code chunk {-}
+### Source from a URL {#SourceSecureURL}
+## Reproducibly Random: `set.seed()`
+## Computationally Intensive Analyses
+#### `cache.vars` {- #CacheVars}
+### Chapter summary {-}
+
+<!--chapter:end:10-modeling.Rmd-->
+
+
+# Showing Results with Tables {#TablesChapter}
+
+Placeholder
+
+
+## Basic *knitr* Syntax for Tables {#ResultsOptions}
+## Table Basics
+### Tables in LaTeX {#LaTeXTables}
+#### The `tabular` environment {-}
+#### The `table` float environment {- #POSITIONSPEC}
+### Tables in Markdown/HTML
+#### Markdown tables {-}
+#### HTML tables {-}
+## Creating Tables from Supported Class R Objects
+### `kable` for Markdown and LaTeX
+### *xtable* for LaTeX and HTML
+#### *xtable* for LaTeX {-}
+#### *xtable* for Markdown/HTML {-}
+### *texreg* for LaTeX and HTML
+#### *texreg* for LaTeX {-}
+#### *texreg* for HTML {-}
+### Fitting large tables in LaTeX
+#### LaTeX landscape tables {-}
+#### LaTeX scalebox for tables {-}
+### *xtable* with non-supported class objects {#NonSupportedClasses}
+### Creating variable description documents with *xtable* {#Vardescript_tables}
+### Chapter summary {-}
+## Appendix {-}
+
+<!--chapter:end:11-tables.Rmd-->
+
+
+# Showing Results with Figures {#FiguresChapter}
+
+Placeholder
+
+
+## Including Non-knitted Graphics
+### Including graphics in LaTeX
+#### `figure` float environment {-}
+### Including graphics in Markdown/HTML
+### Non-knitted graphics with *knitr*/*rmarkdown*
+## Basic *knitr*/*rmarkdown* Figure Options
+### Chunk options
+#### `fig.path` {-}
+#### `out.height` {-}
+#### `out.width` {-}
+#### `fig.align` {-}
+#### `fig.cap` {-}
+#### Other figure chunk options {-}
+### Global options
+## Knitting R's Default Graphics
+## Including *ggplot2* Graphics
+### Showing regression results with caterpillar plots
+## JavaScript Graphs with *googleVis*
+### Basic googleVis figures
+### Including *googleVis* in knitted documents
+### JavaScript Graphs with *htmlwidgets*-based packages
+### Chapter summary {-}
+
+<!--chapter:end:12-figures.Rmd-->
+
+
+# (PART) Presentation Documents {-}
+# Presenting with LaTeX {#LatexChapter}
+
+Placeholder
+
+
+## The Basics
+### Getting started with LaTeX editors
+### Basic LaTeX command syntax
+### The LaTeX preamble and body {#LaTeXPreamble}
+### Headings
+### Paragraphs and spacing
+### Horizontal lines
+### Text formatting
+#### Italics and Bold {-}
+#### Font size {- #FontSize}
+#### Diacritics {-}
+#### Quotation marks {-}
+### Math {#MathLaTeX}
+### Lists
+### Footnotes
+### Cross-references
+## Bibliographies with BibTeX {#BibTeXBib}
+### The *.bib* file
+### Including citations in LaTeX documents
+### Generating a BibTeX file of R package citations
+## Presentations with LaTeX Beamer {#latexBeamer}
+### Beamer basics
+#### The Beamer preamble {-}
+#### Slide frames {-}
+#### Title frames {-}
+#### Sections and outlines {-}
+#### Make list items appear {-}
+### *knitr* with LaTeX slideshows
+### Chapter summary {-}
+
+<!--chapter:end:13-latex.Rmd-->
+
+
+# Presenting in a Variety of Formats with R Markdown {#MarkdownChapter}
+
+Placeholder
+
+
+## The Basics
+### Getting started with Markdown editors
+### Preamble and document structure
+### Headings {#MarkdownHeader}
+### Horizontal lines
+### Paragraphs and new lines
+### Italics and bold
+### Links {#MarkdownLinks}
+### Special characters and font customization {-}
+### Lists
+### Escape characters {-}
+### Math with MathJax
+## Further Customizability with *rmarkdown*
+### More on *rmarkdown* Headers {-}
+#### Bibliographies with Pandoc {-}
+#### Footnotes with Pandoc {-}
+### CSS style files and Markdown
+#### Rendering R Markdown files to HTML using custom CSS {-}
+## Slideshows with Markdown, R Markdown, and HTML
+#### HTML5 frameworks {-}
+### HTML slideshows with *rmarkdown*
+### LaTeX Beamer slideshows with *rmarkdown* {#rmarkdownBeamer}
+### Slideshows with Markdown and RStudio's R Presentations
+#### Editing and compiling the presentation {-}
+#### Publishing slideshows {-}
+## Publishing HTML Documents Created with R Markdown
+### Standalone HTML files {-}
+### GitHub Pages {-}
+### Further information on R Markdown
+### Chapter summary {-}
+
+<!--chapter:end:14-web.Rmd-->
+
+
+# Conclusion {#bookconclusion}
+
+Placeholder
+
+
+## Citing Reproducible Research
+## Licensing Your Reproducible Research
+## Sharing Your Code in Packages
+## Project Development: Public or Private?
+## Is it Possible to Completely Future-Proof Your Research?
+
+<!--chapter:end:16-conclusion.Rmd-->
+
+`r if (knitr:::is_html_output()) '# References {-}'`
+
+```{r include=FALSE}
+# Additional packages to cite
+pkg_additional <- c(
+    .packages(),
+    "animation", "bookdown", "countrycode", "data.table", "dbplyr", "dplyr", "formatR", "ggplot2", "here", "htmlwidgets", "httr", "IRkernel", "jsonlite", "magick", "markdown", "packrat", "pacman", "pdftools", "ProjectTemplate", "purrr", "RCurl", "rvest", "shiny", "stargazer", "styler", "survival", "tibble", "tidyr", "tinytex", "XML"
+)
+
+# Check if the packages are installed, if not install
+lapply(pkg_additional,
+    function(pkg) {
+        if (system.file(package = pkg) == "")
+            install.packages(pkg,
+                repos = "http://cran.us.r-project.org")
+})
+
+# pkg_to_install is created in 00-setup.Rmd
+pkg_to_cite <- c(pkg_to_install, pkg_additional)
+
+# generate a BibTeX database automatically for some R packages
+knitr::write_bib(pkg_to_cite, 'packages.bib')
+```
+
+<!--chapter:end:99-references.Rmd-->
+
